@@ -3,7 +3,7 @@
 <head>
   <script>
     // WebXR requires https: to work so ensure redirected if needed.
-    if (location.hostname !== 'localhost' && window.location.protocol === 'http:') window.location.protocol = 'https:';
+    if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1' && window.location.protocol === 'http:') window.location.protocol = 'https:';
   </script>
 
   <!-- the AFrame library and 3rd party components -->
@@ -37,10 +37,11 @@
   <meta property="og:image" content="https://cdn.glitch.global/d29f98b4-ddd1-4589-8b66-e2446690e697/snapshot.png?v=1645201177438" />
   <link rel="stylesheet" href="style.css">
 </head>
-
+ <!-- physx="autoLoad: true; delay: 1000; wasmUrl: https://cdn.jsdelivr.net/gh/c-frame/physx@v0.2.0/wasm/physx.release.wasm; useDefaultScene: false;" -->
 <body>
   <a-scene
-    physx="autoLoad: true; delay: 1000; wasmUrl: https://cdn.jsdelivr.net/gh/c-frame/physx@v0.2.0/wasm/physx.release.wasm; useDefaultScene: false;"
+    physx="autoLoad: true; delay: 1000; wasmUrl: lib/physx.release.wasm; useDefaultScene: false;"
+   
     webxr="overlayElement:#dom-overlay;"
     background="color:skyblue;"
     reflection="directionalLight:#dirlight;"
