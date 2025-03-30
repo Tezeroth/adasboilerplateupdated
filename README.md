@@ -1,3 +1,5 @@
+walking through last 5 or so updates to see if i can identify what caused my last pull/edit of this repo at https://tezeroth.github.io/Boilerplate/ to stop working. will then attempt to combine with currently working desktop and mobile object/physics repo codenamed neostratum
+
 xr-starter-kit
 =============
 
